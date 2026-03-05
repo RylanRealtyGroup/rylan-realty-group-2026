@@ -183,7 +183,7 @@ a { color: inherit; text-decoration: none; }
   left: -18px;
   top: 44px;
   bottom: 44px;                 /* auto size based on content */
-  width: min(720px, 92vw);
+  width: min(860px, 92vw);
   border-radius: 22px;
 
   background: linear-gradient(
@@ -231,6 +231,7 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
   margin-top: 12px;
+  max-width: 100%;
 }
 
 .highlight{
@@ -257,6 +258,7 @@ a { color: inherit; text-decoration: none; }
   color: rgba(31, 41, 55, 0.92);
   line-height: 1.2;
   white-space: normal;
+  word-break: break-word;
 }
 
 /* =========================
@@ -609,9 +611,12 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
     padding: 12px 0;
   }
 
-  .brand{
-    min-width: 0;
-    max-width: 75%;
+ .brand{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    max-width: 70%;
   }
 
   .brand-logo{
@@ -619,8 +624,12 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
     max-width: 260px;
   }
 
-  .header-phone{
+   .header-phone{
+    display: block;
     font-size: 13px;
+    font-weight: 800;
+    line-height: 1.1;
+    white-space: nowrap; /* keep number on one line */
   }
 
   .nav-toggle{
@@ -685,5 +694,12 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
 
   .hero-highlights .highlight:first-child{
     border-top: none;
+  }
+}
+
+@media (min-width: 861px){
+  .hero-highlights{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
   }
 }
