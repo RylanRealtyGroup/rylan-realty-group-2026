@@ -188,8 +188,8 @@ a { color: inherit; text-decoration: none; }
   width: min(660px, 92vw);
   height: 320px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid rgba(31, 41, 55, 0.14);
+  background: rgba(255, 255, 255, 0.25);
+  /* border: 1px solid rgba(31, 41, 55, 0.14); */
   box-shadow: 0 18px 44px rgba(31, 41, 55, 0.14);
   backdrop-filter: blur(10px);
   z-index: 0;
@@ -228,20 +228,21 @@ a { color: inherit; text-decoration: none; }
 
 /* Replaces the old badge pills */
 .hero-highlights{
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
 }
 
 .highlight{
   padding: 10px 0;
-  min-width: 170px;
-  border-right: 1px solid rgba(31, 41, 55, 0.14);
+  border-left: 1px solid rgba(31, 41, 55, 0.14);
+  padding-left: 14px;
 }
 
-.highlight:last-child{
-  border-right: none;
+.hero-highlights .highlight:first-child{
+  border-left: none;
+  padding-left: 0;
 }
 
 .highlight-kicker{
@@ -249,12 +250,14 @@ a { color: inherit; text-decoration: none; }
   color: rgba(31, 41, 55, 0.55);
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .highlight-text{
   font-weight: 800;
   color: rgba(31, 41, 55, 0.92);
+  line-height: 1.2;
+  white-space: normal;   /* allow wrapping */
 }
 
 .badge{
@@ -606,6 +609,23 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
 
 .footer-legal { justify-self: end; }
 @media (max-width: 980px) { .footer-legal { justify-self: start; } }
+
+@media (max-width: 720px){
+  .hero-highlights{
+    grid-template-columns: 1fr;
+  }
+
+  .highlight{
+    border-left: none;
+    padding-left: 0;
+    padding-top: 8px;
+    border-top: 1px solid rgba(31, 41, 55, 0.14);
+  }
+
+  .hero-highlights .highlight:first-child{
+    border-top: none;
+  }
+}
 
 .footer-social {
   display: inline-flex;
