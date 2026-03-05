@@ -633,9 +633,47 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
   }
 
   .nav-toggle{
-    display: inline-flex;
-    margin-left: 0;
-  }
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(31,41,55,0.04);
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+
+  transition: background .15s ease;
+}
+
+.nav-toggle:hover{
+  background: rgba(31,41,55,0.08);
+}
+
+/* hamburger lines */
+.nav-toggle span{
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  display: block;
+  transition: transform .25s ease, opacity .2s ease;
+}
+
+  .nav-toggle.active span:nth-child(1){
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2){
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3){
+  transform: translateY(-6px) rotate(-45deg);
+}
 
   /* ✅ fixed, scrollable mobile nav */
   .site-nav{
