@@ -703,3 +703,128 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
     align-items: start;
   }
 }
+
+/* =========================================
+   HERO: Fix desktop spacing / dead zones
+========================================= */
+
+/* make hero content area a consistent width so the panel doesn't look empty */
+.hero-content{
+  width: min(980px, 100%);
+}
+
+/* make the panel track the content width (no huge empty right area) */
+.hero-content::before{
+  width: min(980px, 92vw);
+  left: 0;            /* align with content, no negative offset */
+  right: auto;
+  top: 44px;
+  bottom: 44px;
+}
+
+/* tighten up spacing a bit */
+.hero-actions{ margin-bottom: 14px; }
+
+/* highlights: reduce gap + keep them from looking too spread out */
+.hero-highlights{
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.highlight{
+  padding: 8px 0;
+  padding-left: 12px;
+}
+
+/* keep the highlights visually centered/filled in the panel */
+@media (min-width: 861px){
+  .hero-content{
+    padding: 72px 0;
+  }
+
+  .hero-highlights{
+    grid-template-columns: 1.2fr 1fr 1fr; /* gives Local Expertise a little more room */
+  }
+}
+
+/* =========================================
+   HEADER + MOBILE NAV: Fix phone overflow + missing nav
+========================================= */
+
+@media (max-width: 860px){
+  body{ padding-top: 96px; }
+
+  .header-inner{
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  /* brand must not steal all width */
+  .brand{
+    min-width: 0;
+    max-width: calc(100% - 60px); /* leaves room for burger */
+  }
+
+  .brand-logo{
+    height: 54px;
+    max-width: 240px;
+  }
+
+  /* phone sits under logo and NEVER runs off screen */
+  .header-phone{
+    font-size: 13px;
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  .header-phone a{
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;  /* if it MUST clip, it clips cleanly */
+    white-space: nowrap;
+  }
+
+  /* burger always visible */
+  .nav-toggle{
+    display: inline-flex !important;
+    flex: 0 0 auto;
+    margin-left: 0;
+    z-index: 3000;
+  }
+
+  /* mobile nav must be ABOVE hero panel and fixed */
+  .site-nav{
+    position: fixed !important;
+    top: 96px !important;
+    left: 12px !important;
+    right: 12px !important;
+
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px;
+
+    border-radius: 18px;
+    border: 1px solid var(--line);
+    background: rgba(247, 245, 242, 0.98);
+    box-shadow: 0 22px 60px rgba(31, 41, 55, 0.18);
+
+    max-height: calc(100vh - 120px);
+    overflow: auto;
+    z-index: 4000 !important;
+  }
+
+  .site-nav.open{ display: flex; }
+
+  .nav-link{
+    width: 100%;
+    padding: 12px 12px;
+    white-space: normal;
+  }
+}
+
+/* extra small phones: reduce logo width so phone doesn't get squeezed */
+@media (max-width: 420px){
+  .brand-logo{ max-width: 210px; }
+}
