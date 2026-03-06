@@ -12,10 +12,14 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-wrap">
+    <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="Rylan Realty Group home">
         <img src="images/RRG_Logo.png" alt="Rylan Realty Group logo" class="brand-logo" />
       </a>
+
+      <div class="header-phone">
+        <a href="tel:4193355462">(419) 335-5462</a>
+      </div>
 
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
@@ -24,44 +28,47 @@
       </button>
 
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="index.html" class="active">Home</a>
-        <a href="buy.html">Buy</a>
-        <a href="sell.html">Sell</a>
-        <a href="team.html">Team</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" class="nav-link is-active">Home</a>
+        <a href="buy.html" class="nav-link">Buy</a>
+        <a href="sell.html" class="nav-link">Sell</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="contact.html" class="nav-link nav-pill">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero hero-home">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Northwest Ohio Real Estate</p>
-          <h1>Local guidance. Personal service. Real results.</h1>
-          <p class="hero-text">
-            Rylan Realty Group helps buyers and sellers move forward with confidence.
-            Whether you are searching for your next home or preparing to sell, our team
-            is here to guide you every step of the way.
-          </p>
+    <section class="hero">
+      <div class="hero-media"></div>
 
-          <div class="hero-actions">
-            <a href="buy.html" class="btn btn-primary">Buying a Home</a>
-            <a href="sell.html" class="btn btn-secondary">Selling a Home</a>
-          </div>
+      <div class="container hero-content">
+        <p class="eyebrow">Northwest Ohio Real Estate</p>
+        <h1 class="hero-title">Local guidance. Personal service. Real results.</h1>
+        <p class="hero-subtitle">
+          Rylan Realty Group helps buyers and sellers move forward with confidence.
+          Whether you are searching for your next home or preparing to sell, our team
+          is here to guide you every step of the way.
+        </p>
+
+        <div class="hero-actions">
+          <a href="buy.html" class="btn btn-primary">Buy a Home</a>
+          <a href="sell.html" class="btn btn-ghost">Sell a Home</a>
         </div>
 
-        <div class="hero-card">
-          <h2>How can we help?</h2>
-          <p>
-            Explore our services, browse listings, or reach out to connect with our team.
-          </p>
+        <div class="hero-highlights">
+          <div class="highlight">
+            <div class="highlight-kicker">For Buyers</div>
+            <div class="highlight-text">Dedicated buying guidance from search to closing</div>
+          </div>
 
-          <div class="hero-card-links">
-            <a href="buy.html">Buy a Home</a>
-            <a href="sell.html">Sell a Home</a>
-            <a href="team.html">Meet the Team</a>
-            <a href="contact.html">Contact Us</a>
+          <div class="highlight">
+            <div class="highlight-kicker">For Sellers</div>
+            <div class="highlight-text">Thoughtful pricing, marketing, and negotiation support</div>
+          </div>
+
+          <div class="highlight">
+            <div class="highlight-kicker">Local Focus</div>
+            <div class="highlight-text">Serving Northwest Ohio with a more personal approach</div>
           </div>
         </div>
       </div>
@@ -69,90 +76,85 @@
 
     <section class="section">
       <div class="container">
-        <div class="section-heading center">
+        <div class="section-heading">
           <p class="eyebrow">Start Here</p>
-          <h2>Real estate help built around what you need</h2>
+          <h2>Everything has its own page now</h2>
           <p>
-            We have moved the detailed buying and selling information to dedicated pages
-            so the home page stays simple and easy to navigate.
+            We moved the detailed buying, selling, team, and contact information off the
+            homepage to make the site cleaner and easier to scroll.
           </p>
         </div>
 
-        <div class="service-grid">
-          <article class="service-card">
-            <h3>Buying</h3>
+        <div class="card-grid card-grid-3 mobile-scroll-row">
+          <article class="card">
+            <div class="card-icon">🏡</div>
+            <h3>Buying a Home</h3>
             <p>
-              From first homes to your next move, we help buyers navigate the process
-              with trusted local insight and clear communication.
+              Explore our buying page for a clear look at the home search process,
+              what to expect, and how we help buyers move forward confidently.
             </p>
-            <a href="buy.html" class="text-link">Learn more about buying</a>
+            <a href="buy.html" class="card-link">Go to Buy page</a>
           </article>
 
-          <article class="service-card">
-            <h3>Selling</h3>
+          <article class="card">
+            <div class="card-icon">📋</div>
+            <h3>Selling a Home</h3>
             <p>
-              We help sellers prepare, price, market, and negotiate with a strategy
-              designed around their home and goals.
+              Learn how we help sellers prepare, price, market, and negotiate with
+              a strategy built around their goals.
             </p>
-            <a href="sell.html" class="text-link">Learn more about selling</a>
+            <a href="sell.html" class="card-link">Go to Sell page</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">👥</div>
+            <h3>Meet the Team</h3>
+            <p>
+              Get to know the people behind Rylan Realty Group and connect with the
+              team that is ready to help with your next move.
+            </p>
+            <a href="team.html" class="card-link">Go to Team page</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section our-listings">
       <div class="container">
-        <div class="section-heading">
+        <div class="listings-heading">
           <p class="eyebrow">Featured Listings</p>
           <h2>Homes for sale with Rylan Realty Group</h2>
-          <p>
-            This section can later be connected to your IDX or replaced with live listings.
-            For now, use it as a clean featured listings preview on the homepage.
+          <p class="section-intro">
+            This area can later be tied into IDX. For now, it gives the homepage a clean
+            featured listings section without making the page feel overloaded.
           </p>
         </div>
 
-        <div class="listing-grid">
-          <article class="listing-card">
-            <div class="listing-image placeholder-image">Property Photo</div>
-            <div class="listing-content">
-              <p class="listing-price">$289,900</p>
-              <h3>123 Sample Street</h3>
-              <p class="listing-meta">Wauseon, OH • 3 Bed • 2 Bath • 1,840 Sq Ft</p>
-              <p class="listing-text">
-                Bright, welcoming home with updated finishes, spacious living areas,
-                and a convenient location near schools and shopping.
-              </p>
-              <a href="#" class="text-link">View details</a>
-            </div>
+        <div class="card-grid mobile-scroll-row">
+          <article class="card">
+            <h3>123 Sample Street</h3>
+            <p><strong>$289,900</strong></p>
+            <p>Wauseon, OH • 3 Bed • 2 Bath • 1,840 Sq Ft</p>
+            <a href="#" class="card-link">View details</a>
           </article>
 
-          <article class="listing-card">
-            <div class="listing-image placeholder-image">Property Photo</div>
-            <div class="listing-content">
-              <p class="listing-price">$349,900</p>
-              <h3>456 Example Lane</h3>
-              <p class="listing-meta">Archbold, OH • 4 Bed • 3 Bath • 2,120 Sq Ft</p>
-              <p class="listing-text">
-                Spacious family home featuring open-concept living, a large backyard,
-                and plenty of room to grow.
-              </p>
-              <a href="#" class="text-link">View details</a>
-            </div>
+          <article class="card">
+            <h3>456 Example Lane</h3>
+            <p><strong>$349,900</strong></p>
+            <p>Archbold, OH • 4 Bed • 3 Bath • 2,120 Sq Ft</p>
+            <a href="#" class="card-link">View details</a>
           </article>
 
-          <article class="listing-card">
-            <div class="listing-image placeholder-image">Property Photo</div>
-            <div class="listing-content">
-              <p class="listing-price">$219,900</p>
-              <h3>789 Demo Drive</h3>
-              <p class="listing-meta">Napoleon, OH • 3 Bed • 2 Bath • 1,420 Sq Ft</p>
-              <p class="listing-text">
-                Comfortable and move-in ready with great natural light, charming curb
-                appeal, and an easy-to-maintain layout.
-              </p>
-              <a href="#" class="text-link">View details</a>
-            </div>
+          <article class="card">
+            <h3>789 Demo Drive</h3>
+            <p><strong>$219,900</strong></p>
+            <p>Napoleon, OH • 3 Bed • 2 Bath • 1,420 Sq Ft</p>
+            <a href="#" class="card-link">View details</a>
           </article>
+        </div>
+
+        <div class="center">
+          <a href="contact.html" class="btn btn-small">Ask About Available Properties</a>
         </div>
       </div>
     </section>
@@ -164,13 +166,13 @@
             <p class="eyebrow">Why Choose Rylan Realty Group</p>
             <h2>A more personal real estate experience</h2>
             <p>
-              We believe buying or selling a home should feel supported, informed, and
-              straightforward. Our team focuses on communication, local knowledge, and
-              dependable service from start to finish.
+              Buying or selling a home is a big decision, and it should feel supported,
+              informed, and straightforward. Our team focuses on communication, local
+              knowledge, and dependable service from start to finish.
             </p>
             <p>
-              Whether you are just starting to explore or ready to make a move, we are
-              here to help you take the next step with confidence.
+              Whether you are ready to move now or just beginning to explore your options,
+              we are here to help you take the next step with confidence.
             </p>
           </div>
 
@@ -188,20 +190,21 @@
       </div>
     </section>
 
-    <section class="section cta-section">
+    <section class="section section-alt">
       <div class="container">
-        <div class="cta-card">
-          <div>
-            <p class="eyebrow">Ready to connect?</p>
-            <h2>Let’s talk about your next move.</h2>
-            <p>
-              Whether you are buying, selling, or just starting to explore your options,
-              we would love to hear from you.
-            </p>
-          </div>
+        <div class="section-heading">
+          <p class="eyebrow">Get in Touch</p>
+          <h2>Ready to talk about your next move?</h2>
+          <p>
+            Whether you are buying, selling, or just starting to explore your options,
+            we would love to hear from you.
+          </p>
+        </div>
 
-          <div class="cta-actions">
+        <div class="contact-card">
+          <div class="contact-actions">
             <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            <a href="team.html" class="btn btn-small">Meet the Team</a>
           </div>
         </div>
       </div>
@@ -209,23 +212,33 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-wrap">
+    <div class="container footer-grid">
       <div>
-        <h3>Rylan Realty Group</h3>
-        <p>Your trusted local real estate team.</p>
+        <div class="footer-brand">Rylan Realty Group</div>
+        <p class="muted">
+          Trusted local real estate guidance for buyers and sellers across Northwest Ohio.
+        </p>
       </div>
 
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="buy.html">Buy</a>
         <a href="sell.html">Sell</a>
+      </div>
+
+      <div class="footer-links">
         <a href="team.html">Team</a>
         <a href="contact.html">Contact</a>
       </div>
-    </div>
 
-    <div class="container footer-bottom">
-      <p>&copy; <span id="year"></span> Rylan Realty Group. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="tel:4193355462">(419) 335-5462</a>
+        <a href="mailto:info@rylanrealtygroup.com">info@rylanrealtygroup.com</a>
+      </div>
+
+      <div class="footer-legal">
+        <p class="tiny muted">&copy; <span id="year"></span> Rylan Realty Group</p>
+      </div>
     </div>
   </footer>
 
