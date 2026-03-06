@@ -917,3 +917,7 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
 @media (max-width: 420px) {
   .brand-logo { max-width: 210px; }
 }
+
+.idx-listings-shell .idx-listing-card {
+  outline: 6px solid red !important;
+}
