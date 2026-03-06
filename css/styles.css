@@ -453,111 +453,18 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
 }
 
-/* =========================
-   IDX Listings Grid
-========================= */
-
-.idx-listings-showcase__properties {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0,1fr)) !important;
-  gap: 22px !important;
+.idx-listings-shell {
+  padding: 0;
+  margin: 0;
 }
 
-/* =========================
-   Listing Cards
-========================= */
-
-.idx-listing-card {
-  background: var(--surface) !important;
-  border: 1px solid var(--line) !important;
-  border-radius: var(--radius-lg) !important;
-  overflow: hidden !important;
-  box-shadow: var(--shadow) !important;
-  transition: transform 140ms ease, box-shadow 140ms ease !important;
-}
-
-.idx-listing-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(31,41,55,0.14) !important;
-}
-
-/* image area */
-
-.idx-listing-card__image-wrap {
-  aspect-ratio: 4/3;
-  overflow: hidden;
-  background: #e9e5de;
-}
-
-.idx-listing-card__image-wrap img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  display: block;
-}
-
-/* details */
-
-.idx-listing-card__details {
-  padding: 14px 16px !important;
-}
-
-/* price */
-
-.idx-listing-card__listing-price {
-  font-size: 18px !important;
-  font-weight: 800 !important;
-  color: var(--text) !important;
-}
-
-/* address */
-
-.idx-listing-card__address {
-  font-size: 14px !important;
-  color: var(--muted) !important;
-}
-
-/* remove broker logo */
-
-.idx-listing-card__mls img {
-  display: none !important;
-}
-
-/* virtual tour badge */
-
-.idx-listing-card__label a {
-  background: rgba(47,110,166,0.92) !important;
-  color: white !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  font-size: 11px !important;
-  font-weight: 700 !important;
-}
-
-/* active badge */
-
-.idx-listing-card__prop-status {
-  background: rgba(0,0,0,0.75) !important;
-  color: white !important;
-  padding: 4px 10px !important;
-  border-radius: 999px !important;
-  font-size: 11px !important;
-  font-weight: 700 !important;
-}
-
-/* =========================
-   Responsive
-========================= */
-
-@media (max-width: 980px) {
-  .idx-listings-showcase__properties {
-    grid-template-columns: repeat(2,1fr) !important;
-  }
+.our-listings .center {
+  margin-top: 22px;
 }
 
 @media (max-width: 640px) {
-  .idx-listings-showcase__properties {
-    grid-template-columns: 1fr !important;
+  .listings-heading {
+    margin-bottom: 1.5rem;
   }
 }
 
