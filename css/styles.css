@@ -452,6 +452,15 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
 }
 
+.idx-listings-shell{
+  padding:10px;
+}
+
+/* IDX cards spacing */
+.idx-listings-shell .idx-widget{
+  margin:0 auto;
+}
+
 /* =========================
    Team
 ========================= */
