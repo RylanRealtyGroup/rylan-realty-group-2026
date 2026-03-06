@@ -23,7 +23,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
-  padding-top: 84px; /* fixed header spacing (desktop) */
+  padding-top: 84px;
 }
 
 img { max-width: 100%; display: block; }
@@ -60,7 +60,7 @@ a { color: inherit; text-decoration: none; }
 
 .brand {
   display: flex;
-  flex-direction: column; /* phone UNDER logo */
+  flex-direction: column;
   align-items: flex-start;
   gap: 6px;
   min-width: 280px;
@@ -117,21 +117,18 @@ a { color: inherit; text-decoration: none; }
   background: rgba(31, 41, 55, 0.02);
 }
 
-/* Hamburger button (hidden on desktop) */
 .nav-toggle {
   display: none;
   width: 42px;
   height: 42px;
-  border: none; /* ✅ remove border like you asked */
+  border: none;
   border-radius: 10px;
-  background: rgba(31, 41, 55, 0.06); /* subtle */
+  background: rgba(31, 41, 55, 0.06);
   cursor: pointer;
-
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 4px;
-
   transition: background .15s ease;
   flex: 0 0 auto;
 }
@@ -147,10 +144,9 @@ a { color: inherit; text-decoration: none; }
   transition: transform .25s ease, opacity .2s ease;
 }
 
-/* hamburger -> X animation */
-.nav-toggle.active span:nth-child(1){ transform: translateY(6px) rotate(45deg); }
-.nav-toggle.active span:nth-child(2){ opacity: 0; }
-.nav-toggle.active span:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
+.nav-toggle.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* =========================
    Hero
@@ -187,33 +183,26 @@ a { color: inherit; text-decoration: none; }
   padding: 72px 0;
 }
 
-/* Glass panel behind hero content */
 .hero-content::before {
   content: "";
   position: absolute;
-
   left: -10px;
   top: 44px;
   bottom: 44px;
-
   width: min(980px, 92vw);
   border-radius: 22px;
-
-  /* ✅ more transparent + no border */
   background: linear-gradient(
     90deg,
     rgba(255,255,255,0.32) 0%,
     rgba(255,255,255,0.25) 55%,
     rgba(255,255,255,0.18) 100%
   );
-
   border: none;
   box-shadow: 0 18px 44px rgba(31, 41, 55, 0.14);
   backdrop-filter: blur(10px);
   z-index: 0;
 }
 
-/* inner gutter so text isn't hugging the left edge */
 .hero-content > * {
   position: relative;
   z-index: 1;
@@ -242,7 +231,6 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 14px;
 }
 
-/* Highlights row */
 .hero-highlights {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
@@ -290,19 +278,34 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--line);
 }
 
-.section-head {
+.section-head,
+.section-heading {
   display: grid;
   gap: 6px;
   margin-bottom: 22px;
 }
 
-.section-head h2 {
+.section-head h2,
+.section-heading h2 {
   margin: 0;
   font-size: 28px;
   letter-spacing: -0.3px;
 }
 
-.section-head p { margin: 0; color: var(--muted); }
+.section-head p,
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.eyebrow {
+  margin: 0 0 4px 0;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
 
 /* =========================
    Buttons
@@ -352,7 +355,7 @@ a { color: inherit; text-decoration: none; }
 /* =========================
    Common Surfaces
 ========================= */
-.card, .listing, .tile, .contact-card {
+.card, .tile, .contact-card {
   background: var(--surface);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
@@ -388,7 +391,6 @@ a { color: inherit; text-decoration: none; }
 
 .card h3 { margin: 0 0 8px 0; }
 .card p { margin: 0 0 14px 0; color: var(--muted); }
-
 .card-link { color: var(--accent); font-weight: 700; }
 
 /* =========================
@@ -434,55 +436,20 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* =========================
-   Listings
+   Our Listings
 ========================= */
-/* 
-  .listing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.listing-photo {
-  height: 170px;
-  background-size: cover;
-  background-position: center;
-  filter: saturate(0.98) contrast(1.05);
-}
-
-.listing-body { padding: 16px; }
-.listing-price { font-size: 18px; font-weight: 800; }
-.listing-address { margin-top: 6px; font-weight: 650; }
-.listing-meta { margin: 6px 0 14px 0; color: var(--muted); font-size: 14px; }
-*/
-
-.our-listings{
+.our-listings {
   background: var(--surface-2);
 }
 
-.listings-heading{
-  text-align:center;
-  max-width:720px;
-  margin:0 auto 2rem;
+.listings-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 2rem;
 }
 
-.listings-heading .section-intro{
-  color:var(--muted);
-}
-
-/* IDX container */
-
-#idx-our-listings{
-  margin-top:2rem;
-}
-
-/* Force IDX cards to look better inside your site */
-
-#idx-our-listings .idx-listing,
-#idx-our-listings .idx-results-card{
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
+.listings-heading .section-intro {
+  color: var(--muted);
 }
 
 .idx-listings-embed {
@@ -501,18 +468,6 @@ a { color: inherit; text-decoration: none; }
   border: 0;
   background: #fff;
 }
-
-.listings-heading {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 2rem;
-}
-
-.listings-heading .section-intro {
-  color: var(--muted);
-}
-
-
 
 /* =========================
    Team
@@ -562,7 +517,12 @@ a { color: inherit; text-decoration: none; }
   gap: 14px;
 }
 
-label { display: grid; gap: 6px; margin-bottom: 12px; color: var(--muted); }
+label {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+  color: var(--muted);
+}
 
 input, textarea {
   width: 100%;
@@ -596,6 +556,18 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
   background: rgba(31, 41, 55, 0.02);
 }
 
+.contact-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.btn-icon img {
+  width: 18px;
+  height: 18px;
+}
+
 /* =========================
    Footer
 ========================= */
@@ -610,6 +582,12 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
   grid-template-columns: 1.4fr 1fr 1fr 0.9fr 0.7fr;
   gap: 14px;
   align-items: start;
+}
+
+.footer-brand {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 6px;
 }
 
 .footer-links {
@@ -638,17 +616,24 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
 
 .footer-social:hover { color: var(--text); }
 
-.fb-icon { width: 18px; height: 18px; }
+.fb-icon {
+  width: 18px;
+  height: 18px;
+}
 
 /* =========================
    Responsive
 ========================= */
 @media (max-width: 980px) {
-  .card-grid, .listing-grid, .card-grid-3 { grid-template-columns: 1fr; }
-  .testimonial-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .office-grid { grid-template-columns: 1fr; }
+  .card-grid,
+  .card-grid-3,
+  .testimonial-grid,
+  .contact-grid,
+  .footer-grid,
+  .office-grid {
+    grid-template-columns: 1fr;
+  }
+
   .footer-legal { justify-self: start; }
 }
 
@@ -690,17 +675,14 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
     top: 96px;
     left: 12px;
     right: 12px;
-
     display: none;
     flex-direction: column;
     gap: 8px;
     padding: 14px;
-
     border-radius: 18px;
     border: 1px solid var(--line);
     background: rgba(247, 245, 242, 0.98);
     box-shadow: 0 22px 60px rgba(31, 41, 55, 0.18);
-
     max-height: calc(100vh - 120px);
     overflow: auto;
     z-index: 4000;
@@ -721,8 +703,7 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
 
   .hero-content { padding: 36px 0 48px 0; }
 
-  /* ✅ panel expands with content on mobile */
-  .hero-content::before{
+  .hero-content::before {
     left: -6px;
     right: -6px;
     width: auto;
@@ -731,7 +712,6 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
     border-radius: 20px;
   }
 
-  /* stack highlights */
   .hero-highlights {
     grid-template-columns: 1fr;
     padding-left: 28px;
@@ -745,9 +725,16 @@ input:focus, textarea:focus { border-color: rgba(47, 110, 166, 0.55); }
     border-top: 1px solid rgba(31, 41, 55, 0.14);
   }
 
-  .hero-highlights .highlight:first-child { border-top: none; padding-top: 0; }
+  .hero-highlights .highlight:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .idx-listings-embed iframe {
+    min-height: 1800px;
+  }
 }
 
-@media (max-width: 420px){
-  .brand-logo{ max-width: 210px; }
+@media (max-width: 420px) {
+  .brand-logo { max-width: 210px; }
 }
