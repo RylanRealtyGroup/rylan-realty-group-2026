@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rylan Realty Group</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
 
-  <!-- Header / Nav -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#">
@@ -38,7 +35,6 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="hero-media" role="img" aria-label="Modern home interior photo"></div>
 
@@ -49,7 +45,7 @@
       </p>
 
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#featured">View Featured Listings</a>
+        <a class="btn btn-primary" href="#listings">View Featured Listings</a>
         <a class="btn btn-ghost" href="#contact">Talk to an Agent</a>
       </div>
 
@@ -61,12 +57,12 @@
             Southeast Michigan
           </div>
         </div>
-      
+
         <div class="highlight">
           <div class="highlight-kicker">Property Mgmt</div>
           <div class="highlight-text">Owners & Tenants</div>
         </div>
-      
+
         <div class="highlight">
           <div class="highlight-kicker">Fast Response</div>
           <div class="highlight-text">Call / Text / Email</div>
@@ -75,7 +71,6 @@
     </div>
   </section>
 
-  <!-- Quick Actions -->
   <section class="section">
     <div class="container">
       <div class="section-head">
@@ -108,70 +103,35 @@
     </div>
   </section>
 
-  <!-- Featured Listings -->
- <section class="our-listings section" id="listings">
-  <div class="container">
+  <section class="our-listings section" id="listings">
+    <div class="container">
+      <div class="section-heading listings-heading">
+        <p class="eyebrow">Featured Properties</p>
+        <h2>Our Listings</h2>
+        <p class="section-intro">
+          Browse homes currently listed by Rylan Realty Group.
+        </p>
+      </div>
 
-    <div class="section-heading listings-heading">
-      <p class="eyebrow">Featured Properties</p>
-      <h2>Our Listings</h2>
-      <p class="section-intro">
-        Browse homes currently listed by Rylan Realty Group.
-      </p>
-    </div>
+      <div class="idx-listings-embed">
+        <iframe
+          src="https://rylanrealtygroup.idxbroker.com/i/our-listings?full=1"
+          title="Rylan Realty Group Listings"
+          loading="lazy"
+          width="100%"
+          height="1600"
+          frameborder="0">
+        </iframe>
+      </div>
 
-      <!-- Later: replace this with your IDX/MLS embed or API-rendered cards -->
-  <!--    <div class="listing-grid">
-        <article class="listing">
-          <div class="listing-photo" style="background-image:url('images/misc/placeholder-home-1.jpg');"></div>
-          <div class="listing-body">
-            <div class="listing-price">$349,900</div>
-            <div class="listing-address">123 Main St, Perrysburg, OH</div>
-            <div class="listing-meta">3 bed • 2 bath • 1,850 sqft</div>
-            <a class="btn btn-small" href="#">View details</a>
-          </div>
-        </article>
-
-        <article class="listing">
-          <div class="listing-photo" style="background-image:url('images/misc/placeholder-home-2.jpg');"></div>
-          <div class="listing-body">
-            <div class="listing-price">$289,500</div>
-            <div class="listing-address">456 Oak Ave, Bowling Green, OH</div>
-            <div class="listing-meta">4 bed • 2.5 bath • 2,100 sqft</div>
-            <a class="btn btn-small" href="#">View details</a>
-          </div>
-        </article>
-
-        <article class="listing">
-          <div class="listing-photo" style="background-image:url('images/misc/placeholder-home-3.jpg');"></div>
-          <div class="listing-body">
-            <div class="listing-price">$419,000</div>
-            <div class="listing-address">789 River Rd, Maumee, OH</div>
-            <div class="listing-meta">4 bed • 3 bath • 2,450 sqft</div>
-            <a class="btn btn-small" href="#">View details</a>
-          </div>
-        </article>
-      </div> -->
-
- <!-- IDX Listings Container -->
-    <div class="idx-listings-embed">
-      <iframe
-        src="https://rylanrealtygroup.idxbroker.com/i/our-listings?full=1"
-        title="Rylan Realty Group Listings"
-        loading="lazy"
-        width="100%"
-        height="1600"
-        frameborder="0">
-      </iframe>
-    </div>
-    
       <div class="center">
-        <a class="btn btn-primary" href="https://rylanrealtygroup.idxbroker.com/i/our-listings">See all listings</a>
-      </div> 
+        <a class="btn btn-primary" href="https://rylanrealtygroup.idxbroker.com/i/our-listings" target="_blank" rel="noopener">
+          See all listings
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Why Choose Rylan (Slim: 3 Cards) -->
   <section class="section">
     <div class="container">
       <div class="section-head">
@@ -201,7 +161,6 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
   <section class="section section-alt">
     <div class="container">
       <div class="section-head">
@@ -263,7 +222,6 @@
     </div>
   </section>
 
-  <!-- Team (Clean Profile Rows) -->
   <section id="team" class="section">
     <div class="container">
       <div class="section-head">
@@ -299,7 +257,6 @@
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="section section-alt">
     <div class="container">
       <div class="section-head">
@@ -361,13 +318,12 @@
               href="https://www.facebook.com/rylanrealty"
               target="_blank" rel="noopener"
               aria-label="Visit us on Facebook">
-              <img src="images/fbook.png" alt="" aria-hidden="true">
+              <img src="images/logos/fbook.png" alt="" aria-hidden="true">
               Facebook →
             </a>
           </div>
         </div>
 
-        <!-- Optional: You can add a simple contact form later in this 2nd column -->
         <div class="contact-card">
           <h3>Send a message</h3>
           <p class="muted">Quick note for now — form wiring can be added later.</p>
@@ -394,7 +350,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
@@ -420,8 +375,8 @@
       </div>
 
       <div class="footer-links">
-        <a href="#" target="_blank" rel="noopener">Owner Login</a>
-        <a href="#" target="_blank" rel="noopener">Renter Login</a>
+        <a href="https://rylan.managebuilding.com/manager/public/authentication/login?ReturnUrl=%2Fmanager" target="_blank" rel="noopener">Owner Login</a>
+        <a href="https://rylan.managebuilding.com/Resident/portal/login" target="_blank" rel="noopener">Renter Login</a>
       </div>
 
       <div class="footer-links footer-legal">
@@ -437,5 +392,4 @@
 
   <script src="js/script.js"></script>
 </body>
-
 </html>
