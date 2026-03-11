@@ -1310,14 +1310,31 @@ textarea:focus {
 
 .form-status {
   margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
   font-size: 0.95rem;
   line-height: 1.5;
+  border: 1px solid transparent;
+  display: none;
+}
+
+.form-status.is-visible {
+  display: block;
 }
 
 .form-status.is-success {
+  background: rgba(22, 101, 52, 0.08);
+  border-color: rgba(22, 101, 52, 0.18);
   color: #166534;
 }
 
 .form-status.is-error {
+  background: rgba(185, 28, 28, 0.08);
+  border-color: rgba(185, 28, 28, 0.18);
   color: #b91c1c;
+}
+
+button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
