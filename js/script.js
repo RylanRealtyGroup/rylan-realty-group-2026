@@ -113,19 +113,26 @@
         });
 
         if (response.ok) {
-          form.reset();
-
           status.textContent = "Thanks! Your message has been sent. A member of Rylan Realty Group will reach out soon.";
           status.className = "form-status is-visible is-success";
 
           if (submitButton) {
             submitButton.disabled = true;
-            submitButton.textContent = "Verify to Send";
+            submitButton.textContent = "Message Sent";
           }
 
-          if (typeof turnstile !== "undefined") {
-            turnstile.reset();
-          }
+          setTimeout(() => {
+            form.reset();
+
+            if (typeof turnstile !== "undefined") {
+              turnstile.reset();
+            }
+
+            if (submitButton) {
+              submitButton.disabled = true;
+              submitButton.textContent = "Verify to Send";
+            }
+          }, 4000);
         } else {
           const data = await response.json().catch(() => null);
 
