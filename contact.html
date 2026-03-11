@@ -78,38 +78,37 @@
         </div>
 
         <div class="contact-panel">
-          <h3>Send a message</h3>
-          <p class="muted">Quick note for now — form wiring can be connected next.</p>
-
-          <form id="contactForm" form action="https://formspree.io/f/xyknwpln" method="POST">          
-              <label>
-                Name*:
-                <input type="text" name="name" placeholder="Full name" required>
-              </label>
-            
-              <label>
-                Email*:
-                <input type="email" name="email" placeholder="you@example.com" required>
-              </label>
-          
-            <label>
-              Phone:
-              <input type="text" name="phone" placeholder="(555) 555-5555">
-            </label>
-          
-            <label>
-              Message:
-              <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
-            </label>
-          
-            <button class="btn btn-primary" type="submit">
-              Send message
-            </button>
-            
-        <p id="form-status" class="form-status" aria-live="polite"></p>
-            
-          </form>
-        </div>
+        <h3>Send a message</h3>
+        <p class="muted">Have a question or ready to get started? Send us a message and our team will reach out soon.</p>
+      
+        <form id="contactForm" action="https://formspree.io/f/xyknwpln" method="POST">
+          <label>
+            Name*:
+            <input type="text" name="name" placeholder="Full name" required>
+          </label>
+      
+          <label>
+            Email*:
+            <input type="email" name="email" placeholder="you@example.com" required>
+          </label>
+      
+          <label>
+            Phone:
+            <input type="text" name="phone" placeholder="(555) 555-5555">
+          </label>
+      
+          <label>
+            Message:
+            <textarea name="message" rows="5" placeholder="How can we help?"></textarea>
+          </label>
+      
+          <button class="btn btn-primary" type="submit">
+            Send message
+          </button>
+      
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
 
       </div>
     </div>
