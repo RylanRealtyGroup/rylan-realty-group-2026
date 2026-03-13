@@ -355,6 +355,15 @@ a {
   color: var(--accent);
 }
 
+.eyebrow_header {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
 /* =========================
    Buttons
 ========================= */
