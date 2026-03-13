@@ -123,7 +123,7 @@ a {
 
 .site-nav {
   margin-left: auto;
-  padding-left: 18px;
+  padding-left: 34px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -1234,11 +1234,12 @@ textarea:focus {
   }
 
   .brand {
-    min-width: 0;
-    flex: 1 1 auto;
-    max-width: calc(100% - 60px);
-    gap: 12px;
-  }
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-width: 470px;
+  flex: 0 0 470px;
+}
 
   .brand-logo {
     height: 54px;
